@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    double a, pos=0, neg=0;
+    int a, pos=0, neg=0;
     cout <<"введите числа" ;
     
     while (a!=0)
