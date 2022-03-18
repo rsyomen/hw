@@ -18,3 +18,22 @@ int main()
     
 return 0;
 }
+
+1)
+  
+#include <iostream> 
+using namespace std; 
+int main() 
+{ 
+    int a, reversed = 0, remainder; 
+    cout << "введите число: "; 
+    cin >> a; 
+    while(a != 0) 
+    { 
+        remainder = a%10; 
+        reversed = reversed*10 + remainder; 
+        a /= 10;    
+    } 
+    cout << "зеркальное число: " << reversed; 
+return 0;    
+}
