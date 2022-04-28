@@ -1,6 +1,19 @@
 #include <iostream>
 using namespace std;
 
+void sort (int *massiv, int razm) {
+    int b;
+    for (int i=0; i<razm; i++) {
+        for (int j=0; j<razm-1; j++) {
+            if (massiv [j] > massiv [j+1]){
+                b=massiv [j];
+                massiv [j] = massiv [j+1];
+                massiv [j+1] = b; 
+            }
+        }
+    }
+}
+
 int main()
   
 {
@@ -15,16 +28,7 @@ int main()
         cin >> massiv [i];
     }
     
-    int b;
-    for (int i=0; i<razm; i++) {
-        for (int j=0; j<razm-1; j++) {
-            if (massiv [j] > massiv [j+1]){
-                b=massiv [j];
-                massiv [j] = massiv [j+1];
-                massiv [j+1] = b;
-            }
-        }
-    }
+    sort (massiv, razm);
     
     for (int i=0; i<razm; i++) {
         cout << massiv [i] << " ";
